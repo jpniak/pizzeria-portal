@@ -1,4 +1,5 @@
 import React from 'react';
+import Container from './components/layout/Container/Container';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -15,6 +16,7 @@ import OrderingOrder from './components/views/OrderingOrder/OrderingOrder';
 
 function App() {
   return (
+    <Container>
     <BrowserRouter>
       <MainLayout>
         <Switch>
@@ -27,11 +29,10 @@ function App() {
           <Route exact path={process.env.PUBLIC_URL + '/ordering/new'} component={OrderingNew} />
           <Route exact path={process.env.PUBLIC_URL + '/ordering/order/:id'} component={OrderingOrder} />
           <Route exact path={process.env.PUBLIC_URL + '/kitchen'} component={Kitchen} />
-           
         </Switch>
       </MainLayout>
     </BrowserRouter>
-  
+  </Container>
   );
 }
 
