@@ -1,5 +1,4 @@
 import React from 'react';
-import Container from './components/layout/Container/Container';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -16,7 +15,6 @@ import OrderingOrder from './components/views/OrderingOrder/OrderingOrder';
 
 function App() {
   return (
-    <Container>
     <BrowserRouter>
       <MainLayout>
         <Switch>
@@ -32,7 +30,6 @@ function App() {
         </Switch>
       </MainLayout>
     </BrowserRouter>
-  </Container>
   );
 }
 
